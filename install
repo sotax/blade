@@ -20,7 +20,10 @@ echo ", Done."
 
 echo -n "Installing blade..."
 ln -sf $blade_dir/blade ~/bin
-ln -sf $blade_dir/ninja ~/bin
+
+echo -m "Installing ninja..."
+cd $blade_dir/ninja/ && ./configure.py --bootstrap
+ln -sf $blade_dir/ninja/ninja ~/bin
 echo ", Done."
 
 if ! echo $PATH | grep "$HOME/bin" &> /dev/null; then
