@@ -1,4 +1,0 @@
-cc_config(
-    cpplint = '',
-    warnings = ['-Wall', '-Wextra', '-Wframe-larger-than=69632'],
-)
